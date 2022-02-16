@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+       function hitungluaskeliling(){
+           var sisi1, sisi2, keliling, luas;
+        
+          sisi1 = parseInt(document.getElementById("sisi1").value);
+          sisi2 = parseInt(document.getElementById("sisi2").value);
+          keliling = 4 * sisi1;
+          luas = sisi1 * sisi2;
+          document.getElementById("keliling").value = keliling;
+          document.getElementById("luas").value = luas;
+       }
+    </script>
+
+    </head>
+
+    <body>
+        <h1>Menghitung luas dan keliling persegi</h1>
+        <form>
+            <p>sisi1 : <input type="text" id="sisi1"></p>
+            <p>sisi2 : <input type="text" id="sisi2"></p>
+            <p><input type="button" value="hitung" onclick="hitungluaskeliling();"></p>
+            <p>luas : <input type="text" id="luas"></p>
+            <p>keliling : <input type="text" id="keliling"></p>
+        </form>
+    </body>
+</body>
+</html>

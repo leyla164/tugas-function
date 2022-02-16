@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document</title>
+</head>
+<body>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>MENGHITUNG LUAS DAN KELILING SEGITIGA</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Masukan alas</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="alas"></td>
+			</tr>
+			<tr>
+				<td>Masukan tinggi</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="tinggi"></td>
+			</tr>
+			<tr>
+				<td><button onclick="hitung()">Hitung</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Luas segitiga</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="luas" disabled></td>
+			</tr>
+			<tr>
+				<td>Keliling segitiga</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="keliling" disabled></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<script>
+    var luas;
+var keliling;
+var alas;
+var tinggi;
+var sisiMiring;
+function hitung() {
+	alas = parseFloat(document.getElementById("alas").value);
+	tinggi = parseFloat(document.getElementById("tinggi").value);
+	luas = (alas * tinggi) / 2;
+	sisiMiring = Math.sqrt(Math.pow(alas,2)+Math.pow(tinggi,2));
+	keliling = alas + sisiMiring + sisiMiring;
+	document.getElementById('luas').value = luas;
+	document.getElementById('keliling').value = keliling;
+}
+</script>
+</body>
+</html>
